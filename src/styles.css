@@ -2,9 +2,6 @@
 
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
-/* for toast importing */
-@import "~ngx-toastr/toastr";
-
 /* reset */
 *,
 *::after,

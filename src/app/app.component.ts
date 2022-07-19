@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ToastrService } from 'ngx-toastr';
 import { UserService } from './services/user.service';
 
 @Component({
@@ -14,7 +13,6 @@ export class AppComponent implements OnInit {
 
   constructor(
     private userService: UserService,
-    private toastr: ToastrService
   ) {}
 
   ngOnInit() {
@@ -27,7 +25,7 @@ export class AppComponent implements OnInit {
         this.user = user.results[0];
       },
       (err: any) => {
-        this.toastr.error(err.status, "OOPS");
+        console.log(err);
       }
     );
   }
